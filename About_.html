@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوكلاء الرسميون </title>
+    <html lang="ar" dir="rtl">
+
+<!-- language wwitcher tab -->
+<!-- End language wwitcher tab -->
+
+    <link rel="icon" href="img/icon.png">
+
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+         <!-- File CSS -->
+         <link rel="stylesheet" href="CSS/style.css">
+    </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #004080;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ===== Dealers Section ===== */
+    .dealers {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .dealers h2 {
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #004080;
+    }
+
+    .dealer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dealer-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    .dealer-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .dealer-box img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .dealer-box h3 {
+      color: #004080;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    .dealer-box p {
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    /* ===== Why Us Section ===== */
+    .why-us {
+      background: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .why-us h2 {
+      color: #004080;
+      margin-bottom: 20px;
+    }
+
+    .why-us ul {
+      list-style: none;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .why-us li {
+      margin-bottom: 10px;
+      font-size: 1em;
+    }
+    /* ===== Call to Action ===== */
+    .cta {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #004080;
+      color: #fff;
+    }
+    .cta h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .cta p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+    .cta .btn {
+      background-color: #fff;
+      color: #004080;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .cta .btn:hover {
+      background-color: #003060;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== HEADER (Your existing header) ===== -->
+   <div class="cart">
+        <div class="top_cart">
+            <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+            <span onclick="open_close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+        <div class="items_in_cart" id="cart_items">
+        </div>
+        <div class="bottom_cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price_cart_toral">$0</p>
+            </div>
+            <div class="button_cart">
+                <a href="checkout.html" class="btn_cart btn">Checkout</a>
+                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">Shop More</span>
+            </div>
+        </div>
+    </div>
+  <header>
+    <!-- your full header content here (as in your original file) -->
+     <div class="top_header">
+            <div class="container">
+                <a href="index.html" class="logo"> <img src="img/logo.png" alt=""></a>
+                <form action="" class="search_box">
+                    <div class="select_box">
+                        <select id="category" name="category">
+                            <option value="All Categories">All Categories</option>
+                            <option value="Electronics & Digita">Home Appliances</option>
+                            <option value="Phones & Tablet">TVs</option>
+                            <option value="Fashion & Clothings">Fashion & Clothings</option>
+                            <option value="Telivsion & Monitor">Telivsion & Monitor</option>
+                            <option value="Jewelry & Watches">Jewelry & Watches</option>
+                            <option value="Washing Machine">Washing Machine</option>
+                            <option value="Toys & Hobbies">Toys & Hobbies</option>
+                        </select>
+                    </div>
+                    <input type="text" name="search" id="search" placeholder="Search for Products" required>
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <div class="header_icons">
+                    <div class="icon">
+                        <a href="#">
+                            <i class="fa-regular fa-heart"></i>
+                            <span class="count count_favourite">0</span>
+                        </a>
+                    </div>
+                    <div onclick="open_close_cart()" class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="count count_item_header">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_header">
+            <div class="container">
+                <nav class="nav">
+                    <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
+                    <div class="category_nav">
+                        <div onclick="Open_Categ_list()" class="category_btn">
+                            <i class="fa-solid fa-bars"></i>
+                            <p style=" font-size:larger;"> جميع الأقسام</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="category_nav_list">
+                            <a href="#">Top 10 Offers</a>
+                            <a href="Home_Appliances.html">Home Appliances</a>
+                            <a href="TVs.html">TVs</a>
+                            <a href="#">Fashion & Clothings</a>
+                            <a href="#">Telivsion & Monitor</a>
+                            <a href="#">Jewelry & Watches</a>
+                            <a href="#">Toys & Hobbies</a>
+                        </div>
+                    </div>
+                    <ul class="nav_links">
+                        <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+                     <li class="active"><a href="index.html"  style="font-weight:bolder;  font-size: small; font: 1em sans-serif; ">الرئيسية</a></li>
+                        <li><a href="About_.html" style="font-weight: bolder;  font-size: small; font: 1em sans-serif;">الوكلاء الرسميون</a></li>
+                        <li><a href="Ta.html" style="font-weight: bolder; font-size: small; font: 1em sans-serif;">نظام التقسيط</a></li>
+                        <li><a href="blog.html" style="font-weight:bolder;  font-size: small; font: 1em sans-serif;">المدونة</a></li>
+                        <li><a href="contact.html" style="font-weight: bolder;  font-size: small; font: 1em sans-serif;">تواصل معنا</a></li>
+                    </ul>
+                </nav>
+                <!-- <div class="login_signup btns">
+                    <a href="#" class="btn">Login  <i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a href="#" class="btn">Sign UP <i class="fa-solid fa-user-plus"></i></a>
+                </div> -->
+            </div>
+        </div>
+    </header>
+    <div class="banners_4">
+        <div class="container">
+        </div>
+    </div>
+  </header>
+  <!-- ===== PAGE CONTENT START ===== -->
+  <main>
+    <section class="hero">
+      <h1 style="color: #fff;">الوكلاء الرسميون</h1>
+      <p style="color: #faeaea;">نتعاون مع علامات تجارية موثوقة لنقدم لك منتجات أصلية، وجودة مضمونة، ودعم كامل للضمان.</p>
+    </section>
+    <!-- ===== Dealers Grid Section ===== -->
+    <section class="dealers">
+      <div class="dealer-grid">
+        <div class="dealer-box">
+          <img src="img/elaraby.png" alt="Elaraby Logo">
+          <h3>Elaraby Group</h3>
+          <p>The official distributor of top global brands, offering electronics and home appliances with trusted after-sales service.</p>
+        </div>
+        <div class="dealer-box">
+          <img src="img/lg_.png" alt="LG Logo">
+          <h3>LG</h3>
+          <p>Innovating for a better life — premium electronics and smart home solutions from LG’s official dealer.</p>
+        </div>
+        <div class="dealer-box">
+          <img src="img/toshipa_.png" alt="Toshiba Logo">
+          <h3>Toshiba</h3>
+          <p>Reliable performance and timeless technology — genuine Toshiba appliances through our authorized network.</p>
+        </div>
+        <div class="dealer-box">
+          <img src="img/sharp__.png" alt="Sharp Logo">
+          <h3>Sharp</h3>
+          <p>Japanese innovation in home and office electronics, available through our trusted partnership.</p>
+        </div>
+
+        <div class="dealer-box">
+          <img src="img/tank.png" alt="Tank Logo">
+          <h3>Tank</h3>
+          <p>Clean and safe water solutions — official distributor of Tank filters and purification systems.</p>
+        </div>
+
+        <div class="dealer-box">
+          <img src="img/beko.png" alt="Beko Logo">
+          <h3>Beko</h3>
+          <p>European quality and energy-efficient appliances — proudly offered through our official dealer partnership.</p>
+        </div>
+
+        <div class="dealer-box">
+          <img src="img/tornado.png" alt="Tornado Logo">
+          <h3>Tornado</h3>
+          <p>Affordable, durable, and innovative home solutions from Egypt’s trusted Tornado brand.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Why Choose Us Section ===== -->
+    <section class="why-us">
+      <h2>Why Buy from Official Dealers?</h2>
+      <ul>
+        <li> 100% Genuine Products</li>
+        <li> Official Warranty & After-Sales Service</li>
+        <li> Competitive Prices</li>
+        <li> Nationwide Delivery</li>
+        <li> Trusted Customer Support</li>
+      </ul>
+    </section>
+
+    <!-- ===== Call to Action ===== -->
+    <section class="cta">
+      <h2>Shop Authentic. Shop Smart.</h2>
+      <p>Explore our wide range of genuine products from trusted official dealers — with guaranteed quality and support.</p>
+      <a href="#" class="btn">View Products</a>
+    </section>
+
+  </main>
+  <!-- ===== PAGE CONTENT END ===== -->
+
+  <!-- ===== FOOTER (Your existing footer) ===== -->
+<footer>
+        <div class="container">
+
+            <div class="big_row">
+                <img class="logo_footer" src="img/white_logo.png" alt="">
+
+                <p>الصافي سنتر للأجهوة الكهربائية و الأدوات المنزلية</p>
+
+                <div class="icons_footer">
+                    <!-- <a href="#"><i class="fa-solid fa-phone"></i></a> -->
+                    <a href="https://www.facebook.com/share/1Fcx9YwWTS/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/Alsafy_electrical_stores/#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <!-- <a href="#"><i class="fa-brands fa-x-twitter"></i></a> -->
+                    <a href="https://www.tiktok.com/@alsafy_electrical_store?_t=ZS-8zcLZWbm7Wc&_r=1" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>Find It Fast</h4>
+
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Laptops & Computers </a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Smart Phones & Tablets</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> TV & Audio</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Appliances</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Jewelry & Watches</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Quick Links</h4>
+
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Your Account </a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Returns & Exchanges</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Shipping & Delivery</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Estimated Delivery Time</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Purchase Hisotry</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Service us</h4>
+
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Support Center</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Term & Conditions</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Privacy Policy</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Help</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> FAQS</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; <span>Elsafy Center</span> All Rights Reserved.</p>
+
+                <div class="payment_img">
+                    <img src="img/payment_method.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+  <!-- ===== JS Files ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="JS/swiper.js"></script>
+  <script src="JS/items_home.js"></script>
+  <script src="JS/main.js"></script>
+</body>
+</html>

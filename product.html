@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html lang="ar" dir="rtl">
+    <title>تفاصيل المنتج</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <!-- File CSS -->
+          <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+<section class="product-details">
+  <div class="product-images">
+    <!-- الصورة الرئيسية -->
+    <img id="mainImage" alt="Product Image">
+
+    <!-- صور مصغرة / Thumbnail -->
+    <div class="thumbnail-container" id="thumbnailContainer">
+      <!-- سيتم ملؤها بالصور الأخرى بواسطة JS -->
+    </div>
+  </div>
+
+  <div class="product-info">
+    <h1 id="productName"></h1>
+
+    <!-- <div class="price">
+      EGP<span id="productPrice"></span>
+    </div> -->
+
+<div class="price">
+  <span class="current-price">
+    EGP <span id="productPrice"></span>
+  </span>
+
+  <span class="old-price" id="productOldPrice"></span>
+
+  <span class="discount-badge" id="productDiscount"></span>
+</div>
+
+
+
+    <p class="desc" id="productDesc"></p>
+
+    <div class="actions">
+      <button id="addToCartBtn" data-id="1">أضف إلى السلة</button>
+      <button id="buyNowBtn">اشتري الآن</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- <div class="product-extra">
+
+  <div class="specifications">
+    <h3>المواصفات</h3>
+    <ul id="productSpecs"></ul>
+  </div>
+
+  <div class="additional-info">
+    <h3>معلومات إضافية</h3>
+    <ul id="productAdditionalInfo"></ul>
+  </div>
+
+</div> -->
+
+
+<section class="product-details-section">
+  <div class="details-container">
+
+    <!-- Tabs -->
+    <div class="details-tabs">
+      <button class="tab-btn active" data-tab="specs">المواصفات</button>
+      <button class="tab-btn" data-tab="additional">معلومات إضافية</button>
+      <button class="tab-btn" data-tab="accessories">الملحقات</button>
+    </div>
+
+    <!-- المواصفات -->
+    <div class="tab-content active" id="specs">
+      <ul class="specs-list" id="productSpecs"></ul>
+    </div>
+
+    <!-- معلومات إضافية -->
+    <div class="tab-content" id="additional">
+      <ul class="additional-list" id="productAdditionalInfo"></ul>
+    </div>
+    <!-- الملحقات-->
+
+      <div class="tab-content" id="accessories">
+         <ul class="accessories-list" id="productAccessories"></ul>
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.tab).classList.add("active");
+  });
+});
+
+
+</script>
+
+
+
+    <div class="cart">
+        <div class="top_cart">
+            <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+            <span onclick="open_close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+        <div class="items_in_cart" id="cart_items">
+        </div>
+        <div class="bottom_cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price_cart_toral">EGP 0</p>
+            </div>
+            <div class="button_cart">
+                <a href="checkout.html" class="btn_cart btn">الدفع</a>
+                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">تسوق اكثر</span>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="top_header">
+            <div class="container">
+                <a href="index.html" class="logo"> <img src="img/logo.png" alt=""></a>
+                <div class="header_icons">
+                    <div class="icon">
+                        <a href="#">
+                            <i class="fa-regular fa-heart"></i>
+                            <span class="count count_favourite">0</span>
+                        </a>
+                    </div>
+                    <div onclick="open_close_cart()" class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="count count_item_header">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_header">
+            <div class="container">
+                <nav class="nav">
+                    <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
+                    <div class="category_nav">
+
+                        <div onclick="Open_Categ_list()" class="category_btn">
+                            <i class="fa-solid fa-bars" ></i>
+                           &nbsp; 
+                           <p style="font: large;">جميع الأقسام</p>
+                         <style>
+                            p{
+                                color: aliceblue;
+                            }
+                         </style>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div onclick="scrollToSections()" class="category_nav_list">
+                            <a href="#">اقوي 10 عروض</a>
+                            <a href="Home_Appliances.html" style="font-weight:bolder ; font: 1em sans-serif;">الأجهزة المنزلية</a>
+                            <a href="TVs.html" style="font-weight: bolder ; font: 1em sans-serif;">تلفزيونات</a>
+                            <a href="Air Conditioners_Purifiers.html" style="font-weight: bolder ; font: 1em sans-serif;">تكيفات و منقيات هواء</a>
+                            <a href="#" style="font-weight:bolder ; font: 1em sans-serif;">عروض و خصومات</a>
+                            <a href="#" style="font-weight:bolder; font: 1em sans-serif;">الأكثر مبيعا</a>   
+                        </div>
+                    </div>
+                    <ul class="nav_links">
+                        <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+                        <li class="active"><a href="index.html"  style="font-weight:bolder;  font-size: small; font: 1em sans-serif; ">الرئيسية</a></li>
+                        <li><a href="About_.html" style="font-weight: bolder;  font-size: small; font: 1em sans-serif;">الوكلاء الرسميون</a></li>
+                        <li><a href="Ta.html" style="font-weight: bolder; font-size: small; font: 1em sans-serif;">نظام التقسيط</a></li>
+                        <li><a href="blog.html" style="font-weight:bolder;  font-size: small; font: 1em sans-serif;">المدونة</a></li>
+                        <li><a href="contact.html" style="font-weight: bolder;  font-size: small; font: 1em sans-serif;">تواصل معنا</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+        <footer>
+        <div class="container">
+
+            <div class="big_row">
+                <img class="logo_footer" src="img/white_logo.png" alt="">
+
+                <p>الصافي سنتر للأجهوة الكهربائية و الأدوات المنزلية</p>
+
+                <div class="icons_footer">
+                    <!-- <a href="#"><i class="fa-solid fa-phone"></i></a> -->
+                    <a href="https://www.facebook.com/share/1Fcx9YwWTS/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/Alsafy_electrical_stores/#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <!-- <a href="#"><i class="fa-brands fa-x-twitter"></i></a> -->
+                    <a href="https://www.tiktok.com/@alsafy_electrical_store?_t=ZS-8zcLZWbm7Wc&_r=1" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>Find It Fast</h4>
+
+                <div class="links">
+                    <a href="Home_Appliances.html"><i class="fa-solid fa-caret-right"></i> Home Appliances </a>
+                    <a href="TVs.html"><i class="fa-solid fa-caret-right"></i> TVs</a>
+                    <a href="Air Conditioners_Purifiers.html"><i class="fa-solid fa-caret-right"></i> Air Conditioners and Purifiers</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Appliances</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> منتجات اخري</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Quick Links</h4>
+
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Your Account </a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Returns & Exchanges</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Shipping & Delivery</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Estimated Delivery Time</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Purchase Hisotry</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Service us</h4>
+
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Support Center</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Term & Conditions</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Privacy Policy</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Help</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> FAQS</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; <span>Elsafy Center</span> All Rights Reserved.</p>
+
+                <!-- <div class="payment_img">
+                    <img src="img/instaa.png" alt="">
+                </div> -->
+            </div>
+        </div>
+    </footer>
+<script src="js/product.js"></script>
+<script src="js/main.js"></script>
+<script src="js/submit_checkout.js"></script>
+</body>
+</html>

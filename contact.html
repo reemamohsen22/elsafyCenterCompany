@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا</title>
+    <html lang="ar" dir="rtl">
+
+<!-- language wwitcher tab -->
+<!-- End language wwitcher tab -->
+
+    <link rel="icon" href="img/icon.png">
+
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+         <!-- File CSS -->
+         <link rel="stylesheet" href="CSS/style.css">
+    </head>
+  <style>
+.contact-hero {
+  text-align: center;
+  background-color: #004080;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.contact-hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.contact-hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1em;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.contact-box {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.contact-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.contact-box i {
+  font-size: 40px;
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.contact-box h3 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.contact-box a {
+  text-decoration: none;
+  color: #004080;
+  font-weight: bold;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #004080;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #003060;
+}
+
+.contact-cta {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #004080;
+  color: #fff;
+}
+
+.contact-cta h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contact-cta p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.contact-cta .btn {
+  background-color: #fff;
+  color: #004080;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-cta .btn:hover {
+  background-color: #003060;
+  color: #fff;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== HEADER (Your existing header) ===== -->
+   <div class="cart">
+        <div class="top_cart">
+            <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+            <span onclick="open_close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+
+
+        <div class="items_in_cart" id="cart_items">
+
+
+        </div>
+
+
+        <div class="bottom_cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price_cart_toral">$0</p>
+            </div>
+
+            <div class="button_cart">
+                <a href="checkout.html" class="btn_cart btn">Checkout</a>
+                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">Shop More</span>
+            </div>
+        </div>
+
+    </div>
+  <header>
+    <!-- your full header content here (as in your original file) -->
+    <!-- ... -->
+     <div class="top_header">
+            <div class="container">
+                <a href="index.html" class="logo"> <img src="img/logo.png" alt=""></a>
+
+                <!-- <form action="" class="search_box">
+
+                    <div class="select_box">
+
+                        <select id="category" name="category">
+
+                            <option value="All Categories">All Categories</option>
+                            <option value="Electronics & Digita">Home Appliances</option>
+                            <option value="Phones & Tablet">TVs</option>
+                            <option value="Fashion & Clothings">Fashion & Clothings</option>
+                            <option value="Telivsion & Monitor">Telivsion & Monitor</option>
+                            <option value="Jewelry & Watches">Jewelry & Watches</option>
+                            <option value="Washing Machine">Washing Machine</option>
+                            <option value="Toys & Hobbies">Toys & Hobbies</option>
+
+                        </select>
+                    </div>
+
+                    <input type="text" name="search" id="search" placeholder="Search for Products" required>
+
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                </form> -->
+
+                <div class="header_icons">
+                    <div class="icon">
+                        <a href="#">
+                            <i class="fa-regular fa-heart"></i>
+                            <span class="count count_favourite">0</span>
+                        </a>
+                    </div>
+
+                    <div onclick="open_close_cart()" class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="count count_item_header">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bottom_header">
+            <div class="container">
+                <nav class="nav">
+                    
+                    <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
+
+                    <div class="category_nav">
+
+                        <div onclick="Open_Categ_list()" class="category_btn">
+                            <i class="fa-solid fa-bars"></i>
+                            <p style="color: aliceblue; font-weight: 900; font-size: medium;">جميع الأقسام</p>
+                            <i class="fa-solid fa-angle-down"></i>
+
+                        </div>
+
+
+                        <div class="category_nav_list">
+                            <a href="#">اقوي 10 عروض</a>
+                            <a href="Home_Appliances.html">الأجهزة المنزلية</a>
+                            <a href="TVs.html">تلفزيونات</a>
+                            <a href="#">تكيفات و منقيات هواء</a>
+                            <a href="#">عروض و خصومات</a>
+                            <a href="#">الأكثر مبيعا</a>
+                        </div>
+
+                    </div>
+
+                    <ul class="nav_links">
+
+                        <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+
+                        <li class="active"><a href="index.html"  style="font-weight:bolder;  font-size: small; font: 1em sans-serif; ">الرئيسية</a></li>
+                                                <li><a href="About_.html" style="font-weight: bolder;  font-size: small; font: 1em sans-serif;">الوكلاء الرسميون</a></li>
+                                                <li><a href="Ta.html" style="font-weight: bolder; font-size: small; font: 1em sans-serif;">نظام التقسيط</a></li>
+                                                <li><a href="blog.html" style="font-weight:bolder;  font-size: small; font: 1em sans-serif;">المدونة</a></li>
+                                                <li><a href="contact.html" style="font-weight: bolder;  font-size: small; font: 1em sans-serif;">تواصل معنا</a></li>
+
+                    </ul>
+
+                </nav>
+
+                <!-- <div class="login_signup btns">
+                    <a href="#" class="btn">Login  <i class="fa-solid fa-right-to-bracket"></i></a>
+
+                    <a href="#" class="btn">Sign UP <i class="fa-solid fa-user-plus"></i></a>
+                </div> -->
+
+            </div>
+        </div>
+
+        
+    </header>
+    <div class="banners_4">
+        <div class="container">
+
+
+
+          
+        </div>
+    </div>
+
+  </header>
+
+  <!-- ===== PAGE CONTENT START ===== -->
+  <main>
+
+    <!-- ===== Hero Section ===== -->
+<main>
+  <section class="contact-hero">
+    <h1 style="color: #fff;">تواصل معنا</h1>
+    <p style="color: #fff;">نحن هنا لمساعدتك في الاستفسارات المتعلقة بالمنتجات، والدعم الفني، وأكثر من ذلك. تواصل معنا في أي وقت , وسنقوم بالرد عليك في أقرب وقت ممكن.</p>
+  </section>
+
+  <section class="contact-info">
+    <div class="contact-box">
+      <i class="fa-solid fa-phone"></i>
+      <h3>Call</h3>
+      <p>Available daily: 10:00 AM – 10:00 PM</p>
+      <a href="tel:012 87720314" target="_blank" class="contact-btn" style="color: #f9f9f9;">012 87720314</a>
+    </div>
+
+    <div class="contact-box">
+      <i class="fa-brands fa-facebook"></i>
+      <h3>Facebook Page</h3>
+      <p>Chat with us directly through our official Facebook page.</p>
+      <a href="https://m.me/ALSafyElectricalAppliancesHouseholdAppliancesd" target="_blank" class="contact-btn" style="color: #f9f9f9;">Message Us</a>
+    </div>
+
+    <div class="contact-box">
+      <i class="fa-brands fa-whatsapp"></i>
+      <h3>WhatsApp</h3>
+      <p>Chat with us directly on WhatsApp.</p>
+      <a href="https://wa.me/012 87720314" target="_blank" class="contact-btn" style="color: #f9f9f9;">Message Us</a>
+    </div>
+  </section>
+
+  <section class="contact-cta">
+    <h2>Need help or want to place an order?</h2>
+    <p>We’re one message away. Contact us on Facebook or give us a call — we’ll be glad to assist you.</p>
+    <a href="https://www.facebook.com/share/1Fcx9YwWTS/" target="_blank" class="btn">Contact on Facebook</a>
+  </section>
+</main>
+
+  </main>
+  <!-- ===== PAGE CONTENT END ===== -->
+
+  <!-- ===== FOOTER (Your existing footer) ===== -->
+<footer>
+        <div class="container">
+
+            <div class="big_row">
+                <img class="logo_footer" src="img/white_logo.png" alt="">
+
+                <p>الصافي سنتر للأجهوة الكهربائية و الأدوات المنزلية</p>
+
+                <div class="icons_footer">
+                    <!-- <a href="#"><i class="fa-solid fa-phone"></i></a> -->
+                    <a href="https://www.facebook.com/share/1Fcx9YwWTS/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/Alsafy_electrical_stores/#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <!-- <a href="#"><i class="fa-brands fa-x-twitter"></i></a> -->
+                    <a href="https://www.tiktok.com/@alsafy_electrical_store?_t=ZS-8zcLZWbm7Wc&_r=1" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>Find It Fast</h4>
+
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> أجزة منزلية كبيرة </a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> أجهزة منزلية صغيره</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i>تلفزيونات</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> تكيفات و منقيات هواء</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i>العروض و الخصومات</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Quick Links</h4>
+
+                <div class="links">
+                    <!-- <a href="#"><i class="fa-solid fa-caret-right"></i> Your Account </a> -->
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Returns & Exchanges</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Shipping & Delivery</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Estimated Delivery Time</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Purchase Hisotry</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Service us</h4>
+
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Support Center</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Term & Conditions</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Privacy Policy</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Help</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> FAQS</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; <span>Elsafy Center</span>كل الحقوق محفوظة </p>
+
+                <div class="payment_img">
+                    <img src="img/payment_method.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+  <!-- ===== JS Files ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="JS/swiper.js"></script>
+  <script src="JS/items_home.js"></script>
+  <script src="JS/main.js"></script>
+</body>
+</html>

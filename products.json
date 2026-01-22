@@ -9,9 +9,29 @@
   {
     "id": 1,
     "img": "img/product/1.png",
-    "name": "Redmi 13C Dual SIM with 6GB RAM",
-    "price": 280,
-    "catetory":"mobiles"
+    "name": "خلاط سوناي – روتيتو 3*1- 500 وات، 1.5 لتر، 3 سرعات, اسود MAR-2500",
+    "price": 1174,
+    "old_price": 1314,
+    "desc":"خلاط سوناي ٥٠٠ وات و بسعة 1.5 لتر، ٣ سرعات بالإضافة الى خاصية التشغيل المتقطع و يحتوي على شفرات قوية من ستانلس ستيل غير قابلة للصدأ",
+    "catetory":"mobiles",
+      "specifications": {
+    "اللون": "اسود",
+    "الخامة": "بلاستك",
+    "السعة": "1.5 لتر",
+    "القوة": "500 وات",
+    "الموديل": "MAR-2500",
+    "الضمان": "تسنتين"
+  },
+    "accessories": [
+  "مطحنة للحبوب الجافة"
+]
+,
+    "additional_info": [
+    "غطاء مزود بمقياس لإضافة العديد من المكونات أثناء التشغيل",
+    "شفرات قوية من ستانلس ستيل غير قابلة للصدأ",
+    "ملحقة للطحن الجاف لحبوب القهوة والتوابل والمكسرات",
+    "وعاء مقاوم للصدمات مصنوع من البلاستيك و مزود بمقياس داخل"
+  ]
   },
   {
     "id": 2,
@@ -64,13 +84,29 @@
     "catetory":"mobiles"
   },
   {
-    "id": 9,
-    "img": "img/product/9.png",
-    "name": "Handheld Barcode Scanner 1D/2D/QR Code",
-    "price": 80,
-    "old_price": 100,
-    "catetory":"electronics"
+  "id": 9,
+  "img": "img/product/9.png",
+  "name": "Handheld Barcode Scanner 1D/2D/QR Code",
+  "price": 80,
+  "old_price": 100,
+  "catetory": "electronics",
+  "images": ["9.png", "1.png", "img3.jpg"],
+
+  "specifications": {
+    "النوع": "قارئ باركود يدوي",
+    "الدعم": "1D / 2D / QR Code",
+    "التوصيل": "USB",
+    "التوافق": "Windows / Mac",
+    "الاستخدام": "المخازن – المتاجر – الصيدليات"
   },
+
+  "additional_info": [
+    "سهل الاستخدام بدون إعدادات",
+    "قراءة سريعة ودقيقة",
+    "هيكل متين ومقاوم للصدمات"
+  ]
+}
+,
   {
     "id": 10,
     "img": "img/product/10.png",
@@ -180,5 +216,14 @@
     "price": 300,
     "old_price": 380,
     "catetory":"electronics"
+  },
+   {
+    "id": 25,
+    "img": "img/product/logo.png",
+    "name": "Lenovo Monitor Legion R27fc-30 Gaming Curved",
+    "price": 300,
+    "old_price": 380,
+    "catetory":"electronics"
   }
+  
 ]

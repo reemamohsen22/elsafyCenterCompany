@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reda | Online Store</title>
+    <title>الصافي سنتر</title>
+<html lang="ar" dir="rtl">
 
 
     <link rel="icon" href="img/icon.png">
 
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
          <!-- File CSS -->
          <link rel="stylesheet" href="CSS/style.css">
     </head>
 <body>
-
 
     <div class="cart">
         <div class="top_cart">
@@ -34,7 +33,7 @@
         <div class="bottom_cart">
             <div class="total">
                 <p>subtotal</p>
-                <p class="price_cart_toral">$0</p>
+                <p class="price_cart_toral">EGP 0</p>
             </div>
 
             <div class="button_cart">
@@ -44,11 +43,10 @@
         </div>
 
     </div>
-
     <header>
         <div class="top_header">
             <div class="container">
-                <a href="#" class="logo"> <img src="img/logo.png" alt=""></a>
+                <a href="index.html" class="logo"> <img src="img/logo.png" alt=""></a>
 
                 <form action="" class="search_box">
 
@@ -73,8 +71,6 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
 
-                    
-
                 </form>
 
                 <div class="header_icons">
@@ -92,6 +88,178 @@
                 </div>
             </div>
         </div>
+<style>
+.instapay-section {
+  background: #f9fbff;
+  border: 1px solid #e0e6f0;
+  border-radius: 14px;
+  padding: 25px;
+  direction: rtl;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* الصف العلوي */
+.instapay-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.instapay-top-text {
+  flex: 1;
+}
+
+.instapay-top-text h3 {
+  color: #0066ff;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.instapay-top-text p {
+  color: #555;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* الصورة */
+.instapay-top-image {
+  flex: 0 0 180px;
+  text-align: left;
+}
+
+.instapay-top-image img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 10px;
+}
+
+/* باقي المحتوى */
+.company-number {
+  background: #eef4ff;
+  border: 1px dashed #0066ff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0066ff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.instapay-body label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.instapay-body input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.instapay-error {
+  display: none;
+  color: #d93025;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.verify-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #0066ff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.verify-btn:hover {
+  background: #004fd8;
+}
+
+.instapay-note {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #777;
+}
+
+
+.upload-proof {
+  margin-top: 25px;
+}
+
+.upload-proof label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.upload-proof input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #fafafa;
+}
+
+.upload-proof input[type="file"]:hover {
+  border-color: #0066ff;
+}
+
+.upload-note {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #777;
+}
+
+
+</style>
+
+
+
+<script>
+const phoneInput = document.getElementById("user-phone");
+const phoneError = document.getElementById("phone-error");
+const verifyBtn = document.getElementById("verify-btn");
+
+phoneInput.addEventListener("input", function () {
+  this.value = this.value.replace(/[^0-9]/g, "");
+
+  if (this.value.length < 11) {
+    phoneError.style.display = "block";
+    verifyBtn.disabled = true;
+  } else {
+    phoneError.style.display = "none";
+    verifyBtn.disabled = false;
+  }
+});
+
+verifyBtn.addEventListener("click", function () {
+  const phone = phoneInput.value;
+
+  if (phone.length === 11) {
+    alert(
+      "تم إرسال رسالة تحقق إلى الرقم:\n" +
+      phone +
+      "\n\n(تنفيذ فعلي يتطلب ربط SMS API)"
+    );
+
+    // هنا يتم استدعاء السيرفر لاحقًا
+    // fetch('/send-otp', { method: 'POST', body: JSON.stringify({ phone }) })
+  }
+});
+</script>
+
 
 
         <div class="bottom_header">
@@ -104,14 +272,14 @@
 
                         <div onclick="Open_Categ_list()" class="category_btn">
                             <i class="fa-solid fa-bars"></i>
-                            <p>Browse Category</p>
+                            <p style="color: aliceblue; font-weight: 900; font-size: medium;" >جميع الأقسام</p>
                             <i class="fa-solid fa-angle-down"></i>
 
                         </div>
 
 
                         <div class="category_nav_list">
-                            <a href="#">Top 10 Offers</a>
+                            <a href="#">اقوي 10 عروض</a>
                             <a href="#">Electronics & Digita</a>
                             <a href="#">Phones & Tablet</a>
                             <a href="#">Fashion & Clothings</a>
@@ -126,21 +294,21 @@
 
                         <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
 
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Accesories</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
-
+                    <ul class="nav_links">
+                        <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+                        <li class="active"><a href="index.html"  style="font-weight:bolder;  font-size: small; font: 1em sans-serif; ">الرئيسية</a></li>
+                        <li><a href="About_.html" style="font-weight: bolder;  font-size: small; font: 1em sans-serif;">الوكلاء الرسميون</a></li>
+                        <li><a href="Ta.html" style="font-weight: bolder; font-size: small; font: 1em sans-serif;">نظام التقسيط</a></li>
+                        <li><a href="blog.html" style="font-weight:bolder;  font-size: small; font: 1em sans-serif;">المدونة</a></li>
+                        <li><a href="contact.html" style="font-weight: bolder;  font-size: small; font: 1em sans-serif;">تواصل معنا</a></li>
                     </ul>
-
                 </nav>
-
+<!-- 
                 <div class="login_signup btns">
                     <a href="#" class="btn">Login  <i class="fa-solid fa-right-to-bracket"></i></a>
 
                     <a href="#" class="btn">Sign UP <i class="fa-solid fa-user-plus"></i></a>
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -150,86 +318,36 @@
 
 
     <section class="checkout">
-        <form action="">
+        <form id="form_contact" method="post" action="https://script.google.com/macros/s/AKfycbzaq6rxqXA6lKpX__DTRXPCXoI3j940dVVLZBZwDBOlLCUdrml5iwwCimI0yBS-rG7F/exec">
 
 
+            <input type="hidden" id="items" name="items">
+            <input type="hidden" id="total_Price" name="Total Price">
+            <input type="hidden" id="count_Items" name="Count Items">
+            
             <div class="container">
                 <div class="ordersummary">
                     <h1>Order Summary</h1>
 
-                    <div class="items">
-
-    
-
-
-                        <div class="item_cart">
-
-                            <div class="image_name">
-                                <img src="img/product/10.png" alt="">
-
-                                <div class="content">
-                                    <h4>Lorem ipsum dolor sit.</h4>
-                                    <p class="price_cart">$25</p>
-                                    <div class="quantity_control">
-                                        <button class="decrease_quantity">-</button>
-                                        <span class="quantity">3</span>
-                                        <button class="increase_quantity">+</button>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <button class="delete_item"><i class="fa-solid fa-trash-can"></i></button>
-
-
-
-                        </div>
-
-                        <div class="item_cart">
-
-                            <div class="image_name">
-                                <img src="img/product/10.png" alt="">
-
-                                <div class="content">
-                                    <h4>Lorem ipsum dolor sit.</h4>
-                                    <p class="price_cart">$25</p>
-                                    <div class="quantity_control">
-                                        <button class="decrease_quantity">-</button>
-                                        <span class="quantity">3</span>
-                                        <button class="increase_quantity">+</button>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <button class="delete_item"><i class="fa-solid fa-trash-can"></i></button>
-
-
-
-                        </div>
-
-
+                    <div class="items" id="checkout_items">
                     </div>
-
-
-
                     <div class="bottom_summary">
                         <div class="shop_table">
                             <p>Subtotal :</p>
-                            <span class="subtotal_checkout">$325.00</span>
+                            <span class="subtotal_checkout">EGP 325.00</span>
                         </div>
 
 
                         <div class="shop_table">
                             <p>Shipping :</p>
-                            <span class="">$20.00</span>
+                            <span class="">EGP 20.00</span>
                         </div>
 
 
 
                         <div class="shop_table">
                             <p>total :</p>
-                            <span class="total_checkout">$325.00</span>
+                            <span class="total_checkout">EGP 325.00</span>
                         </div>
 
 
@@ -241,26 +359,100 @@
 
                     </div>
 
-
-
-
-
-
-
-
-
                 </div>
 
                 <div class="input_info">
-                    
+
+                    <div class="address">
+                        <h2>Delivery address</h2>
+
+                         <div class="inputs">
+                            <!-- <label for="">Email</label>
+                            <input type="email" placeholder="Enter your email" name="Email" required> -->
+
+                            <label for="" >الأسم</label>
+                            <input type="text" placeholder="enter your name" name="Name" required>
+
+                            <label for="">العنوان</label>
+                            <input type="text" placeholder="enter your address" name="Address" required>
+
+                            <label for="">رقم تليفون 1</label>
+                            <input type="number" placeholder="enter your phone" name="Phone" required>
+
+                            <label for="">رقم تليفون 2</label>
+                            <input type="number" placeholder="enter your phone" name="Phone2" required>
+
+<h4 style="color: #777; font-family:Arial, Helvetica, sans-serif">إرسال صورة واضحه من الوصل او رسالة تأكيد الدفع</h4>
+                            <input type="file" id="proof-image" accept="image/*" required>                      
+                            <input type="hidden" name="proof_image_url" id="proof_image_url">
+
+                            <button type="submit" class="submit-btn">تأكيد الطلب</button>
+
+                        </div>
+
+
+<div class="instapay-section">
+  <!-- القسم العلوي -->
+  <div class="instapay-top">
+    <div class="instapay-top-text">
+      <h3>الدفع عبر InstaPay أو فودافون كاش أو فوري</h3>
+    </div>
+
+    <div class="instapay-top-images">
+      <img src="img/instaa.png" alt="InstaPay Payment">
+      <img src="img/vodafone.png" alt="Vodafone Cash Payment">
+      <img src="img/fawry.png" alt="Fawry Payment">
+      <p>تحويل المبلغ المستحق علي رقم الشركة التالي:</p>
+    </div>
+  </div>
+
+  <!-- القسم السفلي -->
+  <div class="instapay-body">
+    <div class="company-number">01023238936</div>
+    <small class="instapay-note">
+      سيتم إرسال رسالة تحقق لتأكيد عملية الدفع.
+    </small>
+  </div>
+</div>
+
+                    </div>
                 </div>
             </div>
         </form>
     </section>
 
 
-
+<!-- Success Message -->
+<div id="orderSuccess" class="success-message">
+  <i class="fa-solid fa-circle-check"></i>
+  <p>تم التأكيد بنجاح !<br>سيتم التواصل معك من خلال فريقنا .</p>
+</div>
     
+<script>
+  // Prevent default form submission and show success message
+  const checkoutForm = document.getElementById("form_contact");
+  const successMessage = document.getElementById("orderSuccess");
+  
+    // prevent the normal form submission
+
+  checkoutForm.addEventListener("submit", function(e) {
+    e.preventDefault(); 
+    // Show success message
+    successMessage.style.display = "block";
+
+    // Optional: scroll smoothly to message
+    successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    // Optional: clear cart or reset form
+    // checkoutForm.reset();
+
+    // Optional: hide message after few seconds
+    setTimeout(() => {
+      successMessage.style.display = "none";
+    }, 6000);
+  });
+</script>
+
 
     <footer>
         <div class="container">
@@ -268,13 +460,15 @@
             <div class="big_row">
                 <img class="logo_footer" src="img/white_logo.png" alt="">
 
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, vero?</p>
+                <p>الصافي سنتر للأجهوة الكهربائية و الأدوات المنزلية</p>
 
                 <div class="icons_footer">
-                    <a href="#"><i class="fa-solid fa-phone"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <!-- <a href="#"><i class="fa-solid fa-phone"></i></a> -->
+                    <a href="https://www.facebook.com/share/1Fcx9YwWTS/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/Alsafy_electrical_stores/#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <!-- <a href="#"><i class="fa-brands fa-x-twitter"></i></a> -->
+                    <a href="https://www.tiktok.com/@alsafy_electrical_store?_t=ZS-8zcLZWbm7Wc&_r=1" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i></a>
                 </div>
             </div>
 
@@ -322,7 +516,7 @@
                 <p>&copy; <span>Reda Store.</span> All Rights Reserved.</p>
 
                 <div class="payment_img">
-                    <img src="img/payment_method.png" alt="">
+                    <img src="img/instaa.png" alt="">
                 </div>
             </div>
         </div>
@@ -331,5 +525,7 @@
 
 
       <script src="JS/main.js"></script>
+      <script src="JS/submit_checkout.js"></script>
+      <script src="JS/product.js"></script>
 </body>
 </html>

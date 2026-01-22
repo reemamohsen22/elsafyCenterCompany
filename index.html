@@ -1,87 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reda | Online Store</title>
-
-
+    <html lang="ar" dir="rtl">
+    <title>شركة الصافي للأجهزة الكهربائية</title>
     <link rel="icon" href="img/icon.png">
-
-
-
-
-     <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-         <!-- File CSS -->
-         <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <!-- File CSS -->
+          <link rel="stylesheet" href="CSS/style.css">
     </head>
-<body>
-
-
+    <body>
     <div class="cart">
         <div class="top_cart">
             <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
             <span onclick="open_close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
         </div>
-
-
         <div class="items_in_cart" id="cart_items">
-
-
-
         </div>
-
-
         <div class="bottom_cart">
             <div class="total">
                 <p>subtotal</p>
-                <p class="price_cart_toral">$0</p>
+                <p class="price_cart_toral">EGP 0</p>
             </div>
-
             <div class="button_cart">
-                <a href="#" class="btn_cart btn">Checkout</a>
-                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">Shop More</span>
+                <a href="checkout.html" class="btn_cart btn">الدفع</a>
+                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">تسوق اكثر</span>
             </div>
         </div>
-
     </div>
-
     <header>
         <div class="top_header">
             <div class="container">
-                <a href="#" class="logo"> <img src="img/logo.png" alt=""></a>
-
-                <form action="" class="search_box">
-
-                    <div class="select_box">
-                        <select id="category" name="category">
-
-                            <option value="All Categories">All Categories</option>
-                            <option value="Electronics & Digita">Electronics & Digita</option>
-                            <option value="Phones & Tablet">Phones & Tablety</option>
-                            <option value="Fashion & Clothings">Fashion & Clothings</option>
-                            <option value="Telivsion & Monitor">Telivsion & Monitor</option>
-                            <option value="Jewelry & Watches">Jewelry & Watches</option>
-                            <option value="Washing Machine">Washing Machine</option>
-                            <option value="Toys & Hobbies">Toys & Hobbies</option>
-
-                        </select>
-                    </div>
-
-                    <input type="text" name="search" id="search" placeholder="Search for Products" required>
-
-                    <button type="submit">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-
-                    
-
-                </form>
-
+                <a href="index.html" class="logo"> <img src="img/logo.png" alt=""></a>
                 <div class="header_icons">
                     <div class="icon">
                         <a href="#">
@@ -89,7 +41,6 @@
                             <span class="count count_favourite">0</span>
                         </a>
                     </div>
-
                     <div onclick="open_close_cart()" class="icon">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="count count_item_header">0</span>
@@ -97,63 +48,48 @@
                 </div>
             </div>
         </div>
-
-
         <div class="bottom_header">
             <div class="container">
                 <nav class="nav">
-
                     <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
-
                     <div class="category_nav">
 
                         <div onclick="Open_Categ_list()" class="category_btn">
-                            <i class="fa-solid fa-bars"></i>
-                            <p>Browse Category</p>
+                            <i class="fa-solid fa-bars" ></i>
+                           &nbsp; 
+                           <p style="font: large;">جميع الأقسام</p>
+                         <style>
+                            p{
+                                color: aliceblue;
+                            }
+                         </style>
                             <i class="fa-solid fa-angle-down"></i>
-
                         </div>
-
-
-                        <div class="category_nav_list">
-                            <a href="#">Top 10 Offers</a>
-                            <a href="#">Electronics & Digita</a>
-                            <a href="#">Phones & Tablet</a>
-                            <a href="#">Fashion & Clothings</a>
-                            <a href="#">Telivsion & Monitor</a>
-                            <a href="#">Jewelry & Watches</a>
-                            <a href="#">Toys & Hobbies</a>
+                        <div onclick="scrollToSections()" class="category_nav_list">
+                            <a href="#">اقوي 10 عروض</a>
+                            <a href="Home_Appliances.html" style="font-weight:bolder ; font: 1em sans-serif;">الأجهزة المنزلية</a>
+                            <a href="TVs.html" style="font-weight: bolder ; font: 1em sans-serif;">تلفزيونات</a>
+                            <a href="Air Conditioners_Purifiers.html" style="font-weight: bolder ; font: 1em sans-serif;">تكيفات و منقيات هواء</a>
+                            <a href="#" style="font-weight:bolder ; font: 1em sans-serif;">عروض و خصومات</a>
+                            <a href="#" style="font-weight:bolder; font: 1em sans-serif;">الأكثر مبيعا</a>   
                         </div>
-
                     </div>
-
                     <ul class="nav_links">
-
                         <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
-
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Accesories</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
-
+                        <li class="active"><a href="index.html"  style="font-weight:bolder;  font-size: small; font: 1em sans-serif; ">الرئيسية</a></li>
+                        <li><a href="About_.html" style="font-weight: bolder;  font-size: small; font: 1em sans-serif;">الوكلاء الرسميون</a></li>
+                        <li><a href="Ta.html" style="font-weight: bolder; font-size: small; font: 1em sans-serif;">نظام التقسيط</a></li>
+                        <li><a href="blog.html" style="font-weight:bolder;  font-size: small; font: 1em sans-serif;">المدونة</a></li>
+                        <li><a href="contact.html" style="font-weight: bolder;  font-size: small; font: 1em sans-serif;">تواصل معنا</a></li>
                     </ul>
-
                 </nav>
-
-                <div class="login_signup btns">
+                <!-- <div class="login_signup btns">
                     <a href="#" class="btn">Login  <i class="fa-solid fa-right-to-bracket"></i></a>
-
                     <a href="#" class="btn">Sign UP <i class="fa-solid fa-user-plus"></i></a>
-                </div>
-
+                </div> -->
             </div>
         </div>
-
-        
     </header>
-
-
     <div class="slider">
         <div class="container">
 
@@ -163,7 +99,9 @@
 
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="#"><img src="img/banner_home1.png" alt=""></a>
+                                      &nbsp; 
+
+                        <a href="HomeA_Large_refrigerators.html"><img src="img/banner_hom1.png" alt=""></a>
                     </div>
                     <div class="swiper-slide">
                         <a href="#"><img src="img/banner_home2.png" alt=""></a>
@@ -195,15 +133,15 @@
 
                 <img src="img/banner3_1.png" alt="">
                 <div class="text">
-                    <h5>Break Disc</h5>
-                    <h5>deals on this</h5>
+                    <h3>تخفيضات</h3>
+                    
 
                     <div class="sale">
                         <p>Up <br> To</p>
                         <span>70%</span>
                     </div>
 
-                    <h6>Shop Now</h6>
+                    <h6 style="color: rgb(0, 0, 0);"> Shop now</h6>
 
                 </div>
             </div>
@@ -215,14 +153,14 @@
 
                 <img src="img/banner3_2.png" alt="">
                 <div class="text">
-                    <h5>Break Disc</h5>
-                    <h5>deals on this</h5>
+                    <h3>تخفيضات</h3>
+                    
                     <div class="sale">
                         <p>Up <br> To</p>
                         <span>70%</span>
                     </div>
 
-                    <h6>Shop Now</h6>
+                    <h6 style="color: black;">تسوق الان</h6>
 
                 </div>
             </div>
@@ -234,14 +172,13 @@
 
                 <img src="img/banner3_3.png" alt="">
                 <div class="text">
-                    <h5>Break Disc</h5>
-                    <h5>deals on this</h5>
+                    <h3>تخفيضات</h3>
                     <div class="sale">
                         <p>Up <br> To</p>
                         <span>70%</span>
                     </div>
 
-                    <h6>Shop Now</h6>
+                    <h6 style="color: black;">تسوق الان</h6>
 
                 </div>
             </div>
@@ -253,14 +190,14 @@
 
                 <img src="img/banner3_4.png" alt="">
                 <div class="text">
-                    <h5>Break Disc</h5>
-                    <h5>deals on this</h5>
+                    <h3>تخفيضات</h3>
+                    
                     <div class="sale">
                         <p>Up <br> To</p>
                         <span>70%</span>
     
                     </div>
-                    <h6>Shop Now</h6>
+                    <h6 style="color: black;">تسوق الان</h6>
                 </div>
             </div>
 
@@ -275,17 +212,11 @@
 
             <div class="slide_product mySwiper">
 
-                <div class="top_slide">
-                    <h2><i class="fa-solid fa-tags"></i> Hot Deals</h2>
+                <div class="top_slide" id="sections">
+                    <h2 style="color: rgb(241, 241, 241);"><i class="fa-solid fa-tags"></i> اقوي العروض</h2>
                 </div>
                 
                 <div class="products swiper-wrapper" id="swiper_items_sale">
-
-             
-                   
-
-
-
                 </div>
                 
 
@@ -315,20 +246,12 @@
             <div class="slide_product mySwiper">
 
                 <div class="top_slide">
-                    <h2><i class="fa-solid fa-tags"></i> Electronics</h2>
+                    <h2><i class="fa-solid fa-tags"></i> أجهزه كهربائية</h2>
                 </div>
                 
                 <div class="products swiper-wrapper" id="swiper_elctronics">
-
-             
-                   
-
-
-
                 </div>
                 
-
-
                 <div class="swiper-button-next btn_Swip"></div>
                 <div class="swiper-button-prev btn_Swip"></div>
             </div>
@@ -344,7 +267,7 @@
             <div class="slide_product mySwiper">
 
                 <div class="top_slide">
-                    <h2><i class="fa-solid fa-tags"></i> Appliances</h2>
+                    <h2><i class="fa-solid fa-tags"></i> اجهزه مطبخ</h2>
                 </div>
                 
                 <div class="products swiper-wrapper" id="swiper_appliances">
@@ -384,20 +307,11 @@
             <div class="slide_product mySwiper">
 
                 <div class="top_slide">
-                    <h2><i class="fa-solid fa-tags"></i> Mobiles</h2>
+                    <h2><i class="fa-solid fa-tags"></i> منتجات اخري</h2>
                 </div>
                 
                 <div class="products swiper-wrapper" id="swiper_mobiles">
-
-             
-                   
-
-
-
                 </div>
-                
-
-
                 <div class="swiper-button-next btn_Swip"></div>
                 <div class="swiper-button-prev btn_Swip"></div>
             </div>
@@ -405,21 +319,21 @@
         </div>
     </div>
 
-    
-
     <footer>
         <div class="container">
 
             <div class="big_row">
                 <img class="logo_footer" src="img/white_logo.png" alt="">
 
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, vero?</p>
+                <p>الصافي سنتر للأجهوة الكهربائية و الأدوات المنزلية</p>
 
                 <div class="icons_footer">
-                    <a href="#"><i class="fa-solid fa-phone"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <!-- <a href="#"><i class="fa-solid fa-phone"></i></a> -->
+                    <a href="https://www.facebook.com/share/1Fcx9YwWTS/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/Alsafy_electrical_stores/#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <!-- <a href="#"><i class="fa-brands fa-x-twitter"></i></a> -->
+                    <a href="https://www.tiktok.com/@alsafy_electrical_store?_t=ZS-8zcLZWbm7Wc&_r=1" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i></a>
                 </div>
             </div>
 
@@ -427,11 +341,11 @@
                 <h4>Find It Fast</h4>
 
                 <div class="links">
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Laptops & Computers </a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Smart Phones & Tablets</a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> TV & Audio</a>
+                    <a href="Home_Appliances.html"><i class="fa-solid fa-caret-right"></i> Home Appliances </a>
+                    <a href="TVs.html"><i class="fa-solid fa-caret-right"></i> TVs</a>
+                    <a href="Air Conditioners_Purifiers.html"><i class="fa-solid fa-caret-right"></i> Air Conditioners and Purifiers</a>
                     <a href="#"><i class="fa-solid fa-caret-right"></i> Appliances</a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Jewelry & Watches</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> منتجات اخري</a>
                 </div>
             </div>
 
@@ -464,7 +378,7 @@
 
         <div class="bottom_footer">
             <div class="container">
-                <p>&copy; <span>Reda Store.</span> All Rights Reserved.</p>
+                <p>&copy; <span>Elsafy Center</span> All Rights Reserved.</p>
 
                 <div class="payment_img">
                     <img src="img/payment_method.png" alt="">
@@ -473,18 +387,30 @@
         </div>
     </footer>
 
-
-
-
-
-
        <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+function scrollToSections() {
+    const section = document.getElementById("sections");
+    const offset = 120; // ← غيري الرقم ده للتحكم في طول النزول
+
+    const position =
+        section.getBoundingClientRect().top +
+        window.pageYOffset -
+        offset;
+
+    window.scrollTo({
+        top: position,
+        behavior: "smooth"
+    });
+}
+</script>
 
       <!-- File JS -->
      
       <script src="JS/swiper.js"></script>
       <script src="JS/items_home.js"></script>
       <script src="JS/main.js"></script>
+      <script src="JS/submit_checkout.js"></script>
 </body>
 </html>
