@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الوكلاء الرسميون </title>
     <html lang="ar" dir="rtl">
-
+<link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 <!-- language wwitcher tab -->
 <!-- End language wwitcher tab -->
 
@@ -24,7 +26,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+      /* font-family: Arial, Helvetica, sans-serif; */
     }
     body {
       background-color: #f9f9f9;
@@ -164,13 +166,14 @@
         </div>
         <div class="bottom_cart">
             <div class="total">
-                <p>subtotal</p>
+                <p>الإجمالي</p>
                 <p class="price_cart_toral">$0</p>
             </div>
             <div class="button_cart">
-                <a href="checkout.html" class="btn_cart btn">Checkout</a>
-                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">Shop More</span>
-            </div>
+                <a href="checkout.html" class="btn_cart btn">الدفع</a>
+                <a href="index.html">
+                    <span onclick="open_close_cart()" class="btn_cart trans_bg btn">تسوق اكثر</span>
+                </a>            </div>
         </div>
     </div>
   <header>
@@ -216,8 +219,10 @@
                     <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
                     <div class="category_nav">
                         <div onclick="Open_Categ_list()" class="category_btn">
-                            <i class="fa-solid fa-bars"></i>
-                            <p style=" font-size:larger;"> جميع الأقسام</p>
+                             <i class="fa-solid fa-bars" ></i>
+                           &nbsp; 
+                           <p style="font: large;">جميع الأقسام</p>
+                      
                             <i class="fa-solid fa-angle-down"></i>
                         </div>
                         <div class="category_nav_list">
@@ -235,6 +240,7 @@
                      <li class="active"><a href="index.html"  style="font-weight:bolder;  font-size: small; font: 1em sans-serif; ">الرئيسية</a></li>
                         <li><a href="About_.html" style="font-weight: bolder;  font-size: small; font: 1em sans-serif;">الوكلاء الرسميون</a></li>
                         <li><a href="Ta.html" style="font-weight: bolder; font-size: small; font: 1em sans-serif;">نظام التقسيط</a></li>
+                        <li><a href="checkout.html" style="font-weight:bolder;  font-size: small; font: 1em sans-serif;">الدفع</a></li>
                         <li><a href="blog.html" style="font-weight:bolder;  font-size: small; font: 1em sans-serif;">المدونة</a></li>
                         <li><a href="contact.html" style="font-weight: bolder;  font-size: small; font: 1em sans-serif;">تواصل معنا</a></li>
                     </ul>
@@ -255,7 +261,7 @@
   <main>
     <section class="hero">
       <h1 style="color: #fff;">الوكلاء الرسميون</h1>
-      <p style="color: #faeaea;">نتعاون مع علامات تجارية موثوقة لنقدم لك منتجات أصلية، وجودة مضمونة، ودعم كامل للضمان.</p>
+      <p style="color: #faeaea;">نتعاون مع علامات تجارية موثوقة لنقدم منتجات أصلية، وجودة مضمونة، ودعم كامل للضمان.</p>
     </section>
     <!-- ===== Dealers Grid Section ===== -->
     <section class="dealers">
@@ -263,40 +269,40 @@
         <div class="dealer-box">
           <img src="img/elaraby.png" alt="Elaraby Logo">
           <h3>Elaraby Group</h3>
-          <p>The official distributor of top global brands, offering electronics and home appliances with trusted after-sales service.</p>
+          <p>الموزع الرسمي لأفضل الماركات العالمية، حيث يقدم الإلكترونيات والأجهزة المنزلية مع خدمة ما بعد البيع الموثوقة.</p>
         </div>
         <div class="dealer-box">
           <img src="img/lg_.png" alt="LG Logo">
           <h3>LG</h3>
-          <p>Innovating for a better life — premium electronics and smart home solutions from LG’s official dealer.</p>
+          <p>الابتكار من أجل حياة أفضل للإلكترونيات المتميزة وحلول المنزل الذكي من الوكيل الرسمي لشركة LG..</p>
         </div>
         <div class="dealer-box">
           <img src="img/toshipa_.png" alt="Toshiba Logo">
           <h3>Toshiba</h3>
-          <p>Reliable performance and timeless technology — genuine Toshiba appliances through our authorized network.</p>
+          <p>أداء موثوق وتقنية خالدة لأجهزة توشيبا الأصلية من خلال شبكتنا المعتمدة.</p>
         </div>
         <div class="dealer-box">
           <img src="img/sharp__.png" alt="Sharp Logo">
           <h3>Sharp</h3>
-          <p>Japanese innovation in home and office electronics, available through our trusted partnership.</p>
+          <p>الابتكار الياباني في مجال الأجهزة الإلكترونية المنزلية والمكتبية، متاح من خلال شراكتنا الموثوقة..</p>
         </div>
 
         <div class="dealer-box">
           <img src="img/tank.png" alt="Tank Logo">
           <h3>Tank</h3>
-          <p>Clean and safe water solutions — official distributor of Tank filters and purification systems.</p>
+          <p>حلول المياه النظيفة والآمنة الموزع الرسمي لفلاتر الخزانات وأنظمة التنقية.</p>
         </div>
 
         <div class="dealer-box">
           <img src="img/beko.png" alt="Beko Logo">
           <h3>Beko</h3>
-          <p>European quality and energy-efficient appliances — proudly offered through our official dealer partnership.</p>
+          <p>يتم تقديم الأجهزة ذات الجودة الأوروبية والموفرة للطاقة بكل فخر من خلال شراكتنا مع الموزعين الرسميين.</p>
         </div>
 
         <div class="dealer-box">
           <img src="img/tornado.png" alt="Tornado Logo">
           <h3>Tornado</h3>
-          <p>Affordable, durable, and innovative home solutions from Egypt’s trusted Tornado brand.</p>
+          <p>حلول منزلية متينة ومبتكرة وبأسعار معقولة من علامة تورنادو التجارية الموثوقة في مصر.</p>
         </div>
 
       </div>
@@ -304,21 +310,21 @@
 
     <!-- ===== Why Choose Us Section ===== -->
     <section class="why-us">
-      <h2>Why Buy from Official Dealers?</h2>
+      <h2>لماذا تشتري من التجار الرسميين؟</h2>
       <ul>
-        <li> 100% Genuine Products</li>
-        <li> Official Warranty & After-Sales Service</li>
-        <li> Competitive Prices</li>
-        <li> Nationwide Delivery</li>
-        <li> Trusted Customer Support</li>
+        <li> منتجات أصلية 100%</li>
+        <li> الضمان الرسمي وخدمة ما بعد البيع</li>
+        <li>أسعار تنافسية</li>
+        <li> التسليم على الصعيد الوطني</li>
+        <li> دعم العملاء الموثوق به</li>
       </ul>
     </section>
 
     <!-- ===== Call to Action ===== -->
     <section class="cta">
-      <h2>Shop Authentic. Shop Smart.</h2>
-      <p>Explore our wide range of genuine products from trusted official dealers — with guaranteed quality and support.</p>
-      <a href="#" class="btn">View Products</a>
+      <h2>متجر أصيل. تسوق بذكاء.</h2>
+      <p>استكشف مجموعتنا الواسعة من المنتجات الأصلية من التجار الرسميين الموثوقين مع ضمان الجودة والدعم.</p>
+      <a href="#" class="btn">عرض المنتجات</a>
     </section>
 
   </main>
@@ -331,7 +337,7 @@
             <div class="big_row">
                 <img class="logo_footer" src="img/white_logo.png" alt="">
 
-                <p>الصافي سنتر للأجهوة الكهربائية و الأدوات المنزلية</p>
+                <p>الصافي سنتر للأجهزة الكهربائية و الأدوات المنزلية</p>
 
                 <div class="icons_footer">
                     <!-- <a href="#"><i class="fa-solid fa-phone"></i></a> -->

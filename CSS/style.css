@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+html {
+  direction: rtl;
+}
+
+body {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
 
 *{
     padding: 0;
@@ -98,7 +107,10 @@ header .top_header .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 0;
+    padding: 10px 40px 40px 15px ;
+
+    padding-left: 70px;  
+    
 }
 
 header .top_header .logo{
@@ -331,6 +343,76 @@ header .bottom_header .nav_links li.active a{
 
 
 
+
+
+
+
+
+
+
+.slider .container {
+    display: flex;
+    gap: 10px;          /* مسافة بين slider و banner_2 */
+    flex-wrap: wrap;    /* لو الشاشة صغيرة يتحركوا لسطر ثاني */
+}
+
+.slider .slide-swp {
+    flex: 1 1 70%;      /* ياخد تقريبًا 70% من المساحة */
+    min-width: 300px;   /* الحد الأدنى عشان يبقى responsive */
+    overflow: hidden;
+}
+
+.slider .banner_2 {
+    flex: 1 1 25%;      /* ياخد تقريبًا 25% */
+    min-width: 200px;
+}
+
+.slider .banner_2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;   /* يحافظ على نسبة الصورة */
+}
+
+
+
+
+
+
+
+
+.banners_4 .container {
+    display: flex;
+    flex-wrap: wrap;    /* مهم للموبايل */
+    gap: 15px;          /* مسافة ثابتة بين البوكسات */
+    justify-content: space-between;
+}
+
+.banners_4 .container .box,
+.banners_4 .container .box_HA {
+    flex: 1 1 calc(25% - 15px);  /* 4 عناصر في صف + gap */
+    min-width: 200px;             /* responsive */
+    background: url(../img/bg_banner3.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    position: relative;
+    gap: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* banners_4 */ 
 
 .banners_4{
@@ -403,31 +485,6 @@ header .bottom_header .nav_links li.active a{
     height: 100%;
     background: transparent;
 }
-
-
-
-/* Large_Home_Appliances.html */
-
-
-
-
-/* .banners_4 .container .box_TV{
-    width: 24%;
-    background: url(../img/bg_banner3.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 12px 10px;
-    position: relative;
-   
-} */
-
-
-
-
 
 .banners_4 .container .box_HA img{
     width: 100px;
@@ -741,10 +798,14 @@ footer .container{
 
 footer .container  .big_row{
     width: 30%;
+            padding-right: 50px;
+
 }
 
 footer .container  .big_row .logo_footer{
     width: 180px;
+            padding-right: 50px;
+
 }
 
 footer .container  .big_row p{
@@ -753,11 +814,15 @@ footer .container  .big_row p{
     font-size: 14px;
     line-height: 1.5;
     margin: 15px 0;
+            padding-right: 50px;
+
 }
 
 footer .container  .big_row .icons_footer{
     display: flex;
     gap: 10px;
+            padding-right: 50px;
+
 }
 footer .container  .big_row .icons_footer a{
     width: 40px;
@@ -770,6 +835,7 @@ footer .container  .big_row .icons_footer a{
     position: relative;
     top: 0;
     transition: 0.3s;
+    
 }
 footer .container  .big_row .icons_footer a:hover{
     top: -5px;
@@ -781,6 +847,8 @@ footer .container  .big_row .icons_footer a i{
 
 footer .container .row{
     width: 22%;
+            padding-right: 50px;
+
 }
 
 footer .container .row h4{
@@ -1664,7 +1732,7 @@ color: var(--color_heading);
     width: 100%;
     background: var(--white_color);
     display: flex !important;
-    justify-content: center; /* ✅ centers items horizontally */
+    justify-content: center; /*  centers items horizontally */
     align-items: center;
     gap: 25px; /* space between items */
     overflow-x: auto;
@@ -2036,7 +2104,7 @@ color: var(--color_heading);
 
 .submit-btn {
   padding: 12px 30px;             /* مساحة داخلية مناسبة */
-  background-color: #28a745;      /* أخضر يشير للإتمام */
+  background-color: #0057b7;      /* أخضر يشير للإتمام */
   color: white;                   /* نص أبيض واضح */
   font-size: 1rem;                /* حجم نص مناسب */
   font-weight: 600;               /* خط بارز */
@@ -2292,6 +2360,12 @@ color: var(--color_heading);
     padding: 20px; /* مساحة داخلية أفضل */
     margin: 0 auto;
     max-width: 1200px; /* الحد الأقصى لتوسيع الحاوية */
+    width: 100%;          /* المحتوى ياخد كل العرض */
+    max-width: 100%;      /* لا يوجد حد أقصى */
+    padding: 0 80px;      /* مسافة صغيرة من الجوانب */
+    margin: 0 auto;       /* للتوسيط */
+    box-sizing: border-box;
+
 }
 
      /* Styling for the individual card/article */
@@ -2391,4 +2465,9 @@ color: var(--color_heading);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     font-size: larger;
+}
+
+.phone {
+    direction: ltr;      /* اجعل النص يقرأ من اليسار إلى اليمين */
+    unicode-bidi: embed; /* يجعل الاتجاه مستقل عن الـ parent */
 }

@@ -32,13 +32,15 @@
 
         <div class="bottom_cart">
             <div class="total">
-                <p>subtotal</p>
+                <p>الإجمالي</p>
                 <p class="price_cart_toral">EGP 0</p>
             </div>
 
             <div class="button_cart">
-                <a href="#" class="btn_cart btn">Checkout</a>
-                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">Shop More</span>
+                <a href="checkout.html" class="btn_cart btn">الدفع</a>
+                <a href="index.html">
+                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">تسوق أكثر</span>
+                </a>
             </div>
         </div>
 
@@ -272,12 +274,9 @@ verifyBtn.addEventListener("click", function () {
 
                         <div onclick="Open_Categ_list()" class="category_btn">
                             <i class="fa-solid fa-bars"></i>
-                            <p style="color: aliceblue; font-weight: 900; font-size: medium;" >جميع الأقسام</p>
+                            <p>جميع الأقسام</p>
                             <i class="fa-solid fa-angle-down"></i>
-
                         </div>
-
-
                         <div class="category_nav_list">
                             <a href="#">اقوي 10 عروض</a>
                             <a href="#">Electronics & Digita</a>
@@ -291,80 +290,54 @@ verifyBtn.addEventListener("click", function () {
                     </div>
 
                     <ul class="nav_links">
-
-                        <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
-
-                    <ul class="nav_links">
                         <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
                         <li class="active"><a href="index.html"  style="font-weight:bolder;  font-size: small; font: 1em sans-serif; ">الرئيسية</a></li>
                         <li><a href="About_.html" style="font-weight: bolder;  font-size: small; font: 1em sans-serif;">الوكلاء الرسميون</a></li>
                         <li><a href="Ta.html" style="font-weight: bolder; font-size: small; font: 1em sans-serif;">نظام التقسيط</a></li>
+                        <li><a href="checkout.html" style="font-weight:bolder;  font-size: small; font: 1em sans-serif;">الدفع</a></li>
                         <li><a href="blog.html" style="font-weight:bolder;  font-size: small; font: 1em sans-serif;">المدونة</a></li>
                         <li><a href="contact.html" style="font-weight: bolder;  font-size: small; font: 1em sans-serif;">تواصل معنا</a></li>
                     </ul>
                 </nav>
-<!-- 
-                <div class="login_signup btns">
-                    <a href="#" class="btn">Login  <i class="fa-solid fa-right-to-bracket"></i></a>
-
-                    <a href="#" class="btn">Sign UP <i class="fa-solid fa-user-plus"></i></a>
-                </div> -->
-
             </div>
-        </div>
-
-        
+        </div>   
     </header>
-
-
     <section class="checkout">
         <form id="form_contact" method="post" action="https://script.google.com/macros/s/AKfycbzaq6rxqXA6lKpX__DTRXPCXoI3j940dVVLZBZwDBOlLCUdrml5iwwCimI0yBS-rG7F/exec">
-
-
             <input type="hidden" id="items" name="items">
             <input type="hidden" id="total_Price" name="Total Price">
             <input type="hidden" id="count_Items" name="Count Items">
             
             <div class="container">
                 <div class="ordersummary">
-                    <h1>Order Summary</h1>
+                    <h1>كل الطلبات</h1>
 
                     <div class="items" id="checkout_items">
                     </div>
                     <div class="bottom_summary">
                         <div class="shop_table">
-                            <p>Subtotal :</p>
+                            <p>إجمالي الطلبات :</p>
                             <span class="subtotal_checkout">EGP 325.00</span>
                         </div>
 
 
                         <div class="shop_table">
-                            <p>Shipping :</p>
+                            <p>الشحن :</p>
                             <span class="">EGP 20.00</span>
                         </div>
-
-
-
                         <div class="shop_table">
-                            <p>total :</p>
+                            <p>الإجمالي</p>
                             <span class="total_checkout">EGP 325.00</span>
                         </div>
-
-
-                        <div class="button_div">
+                        <!-- <div class="button_div">
                             <button type="submit">Place order</button>
-                        </div>
-
-
-
+                        </div> -->
                     </div>
-
                 </div>
-
                 <div class="input_info">
 
                     <div class="address">
-                        <h2>Delivery address</h2>
+                        <h2>بيانات التوصيل</h2>
 
                          <div class="inputs">
                             <!-- <label for="">Email</label>
@@ -460,13 +433,11 @@ verifyBtn.addEventListener("click", function () {
             <div class="big_row">
                 <img class="logo_footer" src="img/white_logo.png" alt="">
 
-                <p>الصافي سنتر للأجهوة الكهربائية و الأدوات المنزلية</p>
+                <p>الصافي سنتر للأجهزة الكهربائية و الأدوات المنزلية</p>
 
                 <div class="icons_footer">
-                    <!-- <a href="#"><i class="fa-solid fa-phone"></i></a> -->
                     <a href="https://www.facebook.com/share/1Fcx9YwWTS/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/Alsafy_electrical_stores/#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <!-- <a href="#"><i class="fa-brands fa-x-twitter"></i></a> -->
                     <a href="https://www.tiktok.com/@alsafy_electrical_store?_t=ZS-8zcLZWbm7Wc&_r=1" target="_blank">
                     <i class="fa-brands fa-tiktok"></i></a>
                 </div>
