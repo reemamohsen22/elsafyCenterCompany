@@ -50,31 +50,6 @@
             <div class="container">
                 <a href="index.html" class="logo"> <img src="img/logo.png" alt=""></a>
 
-                <form action="" class="search_box">
-
-                    <div class="select_box">
-                        <select id="category" name="category">
-
-                            <option value="All Categories">All Categories</option>
-                            <option value="Electronics & Digita">Electronics & Digita</option>
-                            <option value="Phones & Tablet">Phones & Tablety</option>
-                            <option value="Fashion & Clothings">Fashion & Clothings</option>
-                            <option value="Telivsion & Monitor">Telivsion & Monitor</option>
-                            <option value="Jewelry & Watches">Jewelry & Watches</option>
-                            <option value="Washing Machine">Washing Machine</option>
-                            <option value="Toys & Hobbies">Toys & Hobbies</option>
-
-                        </select>
-                    </div>
-
-                    <input type="text" name="search" id="search" placeholder="Search for Products" required>
-
-                    <button type="submit">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-
-                </form>
-
                 <div class="header_icons">
                     <div class="icon">
                         <a href="#">
@@ -269,26 +244,58 @@ verifyBtn.addEventListener("click", function () {
                 <nav class="nav">
 
                     <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
-
                     <div class="category_nav">
 
                         <div onclick="Open_Categ_list()" class="category_btn">
-                            <i class="fa-solid fa-bars"></i>
-                            <p>جميع الأقسام</p>
+                            <i class="fa-solid fa-bars" ></i>
+                           &nbsp; 
+                           <p style="font: large;">جميع الأقسام</p>
                             <i class="fa-solid fa-angle-down"></i>
                         </div>
-                        <div class="category_nav_list">
-                            <a href="#">اقوي 10 عروض</a>
-                            <a href="#">Electronics & Digita</a>
-                            <a href="#">Phones & Tablet</a>
-                            <a href="#">Fashion & Clothings</a>
-                            <a href="#">Telivsion & Monitor</a>
-                            <a href="#">Jewelry & Watches</a>
-                            <a href="#">Toys & Hobbies</a>
+                        <div onclick="scrollToSections()" class="category_nav_list">
+                            <a href="#" style="font-size: 12px;color: red;">اقوي 10 عروض</a>
+                            <a href="Home_Appliances.html" style=" font: 1em sans-serif;font-size: 12px; padding: -4px;">ثلاجات</a>
+                            <a href="Washing_machines.html" style=" font: 1em sans-serif;font-size: 12px;">غسالات ملابس</a>
+                            <a href="washing_dish.html" style="font-weight: bolder ; font: 1em sans-serif;font-size: 12px">غسالات أطباق</a>
+                            <a href="gas.html" style="font-weight: bolder ; font: 1em sans-serif;font-size: 12px;">بوتاجازات</a>
+                            <div class="category_item has-submenu">
+  <a href="Home_SmallAppliances.html" class="main-link" style="color: darkblue;font-size: 12px;">
+    أجهزة منزلية صغيرة
+  </a>
+
+  <!-- القائمة الفرعية -->
+  <div class="submenu">
+<a href="Home_SmallAppliances.html?filter=heater">دفايات</a>
+<a href="Home_SmallAppliances.html?filter=shafat">شفاطات</a>
+<a href="Home_SmallAppliances.html?filter=small_"> مكانس كهربائية</a>
+<a href="Home_SmallAppliances.html?filter=colder">مبردات مياه</a>
+<a href="Home_SmallAppliances.html?filter=iron">مكواة كهربائية</a>
+  </div>
+</div>
+<br>
+<div class="category_item has-submenu">
+  <a href="kitchen.html" class="main-link" style="color: darkblue;font-size: 12px;" >
+    أجهزة مطبخ
+  </a>
+
+  <!-- القائمة الفرعية -->
+  <div class="submenu">
+<a href="kitchen.html?filter=mixers">خلاطات كهربائية</a>
+<a href="kitchen.html?filter=Kabbat">كبّات ومفرمات</a>
+<a href="kitchen.html?filter=rackets"> مضارب كهربائية</a>
+<a href="kitchen.html?filter=kettles"> غلايات كهربائية</a>
+<a href="kitchen.html?filter=blender">  هاند بلندر</a>
+<a href="kitchen.html?filter=Food">محضرة طعام  </a>
+  </div>
+</div>
+                            <a href="Air Conditioners_Purifiers.html" style="font-weight: bolder ; font: 1em sans-serif;font-size: 12px;"> مكيفات الهواء</a>
+                            <a href="freezer.html" style="font-weight: bolder ; font: 1em sans-serif;font: 1em sans-serif;font-size: 12px;"> ديب فريزر</a>
+                            <a href="TVs.html" style="font-weight:bolder ; font: 1em sans-serif;font: 1em sans-serif;font-size: 12px;">شاشات تلفزيون</a>
+                            <a href="fans.html" style="font-weight:bolder; font: 1em sans-serif;font: 1em sans-serif;font-size: 12px;">مراوح</a>   
+                            <a href="heater.html" style="font-weight:bolder; font: 1em sans-serif;font: 1em sans-serif;font-size: 12px;">سخانات مياه كهربائية</a>
+                            
                         </div>
-
                     </div>
-
                     <ul class="nav_links">
                         <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
                         <li class="active"><a href="index.html"  style="font-weight:bolder;  font-size: small; font: 1em sans-serif; ">الرئيسية</a></li>
@@ -302,6 +309,102 @@ verifyBtn.addEventListener("click", function () {
             </div>
         </div>   
     </header>
+
+
+
+<!-- Mobile Bottom Nav Bar -->
+   <!-- Mobile Bottom Nav Bar -->
+<nav class="mobile_bottom_nav">
+  <ul>
+    <li class="mobile-category">
+      <a href="javascript:void(0)" onclick="toggleMobileCategory()">
+        <i class="fa-solid fa-bars"></i>
+        <span>الأقسام</span>
+      </a>
+
+      <!-- CATEGORY LIST -->
+      <div class="mobile_category_list">
+        <button class="close_mobile_cat" onclick="toggleMobileCategory()" style="padding: 10px ; color: red; font-size: 15px;"> إغلاق✖</button>
+        <a href="#">اقوي 10 عروض</a>
+        <a href="Home_Appliances.html">ثلاجات</a>
+        <a href="Washing_machines.html">غسالات ملابس</a>
+        <a href="washing_dish.html">غسالات أطباق</a>
+        <a href="gas.html">بوتاجازات</a>
+
+        <!-- أجهزة منزلية صغيرة -->
+        <div class="mobile_has_submenu">
+          <span onclick="toggleMobileSub(this)">أجهزة منزلية صغيرة ⌄</span>
+          <div class="mobile_submenu">
+            <a href="Home_SmallAppliances.html?filter=heater">دفايات</a>
+            <a href="Home_SmallAppliances.html?filter=shafat">شفاطات</a>
+            <a href="Home_SmallAppliances.html?filter=small_">مكانس كهربائية</a>
+            <a href="Home_SmallAppliances.html?filter=colder">مبردات مياه</a>
+            <a href="Home_SmallAppliances.html?filter=iron">مكواة كهربائية</a>
+          </div>
+        </div>
+
+        <!-- أجهزة مطبخ -->
+        <div class="mobile_has_submenu">
+          <span onclick="toggleMobileSub(this)">أجهزة مطبخ ⌄</span>
+          <div class="mobile_submenu">
+            <a href="kitchen.html?filter=mixers">خلاطات كهربائية</a>
+            <a href="kitchen.html?filter=Kabbat">كبّات ومفرمات</a>
+            <a href="kitchen.html?filter=rackets">مضارب كهربائية</a>
+            <a href="kitchen.html?filter=kettles">غلايات كهربائية</a>
+            <a href="kitchen.html?filter=blender">هاند بلندر</a>
+            <a href="kitchen.html?filter=Food">محضرة طعام</a>
+          </div>
+        </div>
+
+        <a href="Air Conditioners_Purifiers.html">مكيفات الهواء</a>
+        <a href="freezer.html">ديب فريزر</a>
+        <a href="TVs.html">شاشات تلفزيون</a>
+        <a href="fans.html">مراوح</a>
+        <a href="heater.html">سخانات مياه كهربائية</a>
+
+      </div>
+              </li>
+        <li>
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <span>الرئيسية</span>
+            </a>
+        </li>
+        <li>
+            <a href="Ta.html">
+                <i class="fa-solid fa-credit-card"></i>
+                <span>التقسيط</span>
+            </a>
+        </li>
+
+ <li>
+    <a href="checkout.html" class="cart-icon-mobile">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>السلة</span>
+    </a>
+</li>
+        <li>
+            <a href="contact.html">
+                <i class="fa-solid fa-phone"></i>
+                <span>تواصل</span>
+            </a>
+    </li>
+  </ul>
+</nav>
+<script>
+function toggleMobileCategory() {
+  document.querySelector('.mobile-category').classList.toggle('active');
+}
+
+function toggleMobileSub(el) {
+  const submenu = el.nextElementSibling;
+  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+}
+</script>
+
+
+
+
     <section class="checkout">
         <form id="form_contact" method="post" action="https://script.google.com/macros/s/AKfycbzaq6rxqXA6lKpX__DTRXPCXoI3j940dVVLZBZwDBOlLCUdrml5iwwCimI0yBS-rG7F/exec">
             <input type="hidden" id="items" name="items">
@@ -323,15 +426,12 @@ verifyBtn.addEventListener("click", function () {
 
                         <div class="shop_table">
                             <p>الشحن :</p>
-                            <span class="">EGP 20.00</span>
+                            <span class="">EGP 50.00</span>
                         </div>
                         <div class="shop_table">
                             <p>الإجمالي</p>
                             <span class="total_checkout">EGP 325.00</span>
                         </div>
-                        <!-- <div class="button_div">
-                            <button type="submit">Place order</button>
-                        </div> -->
                     </div>
                 </div>
                 <div class="input_info">
@@ -428,7 +528,7 @@ verifyBtn.addEventListener("click", function () {
 
 
     <footer>
-        <div class="container">
+         <div class="container">
 
             <div class="big_row">
                 <img class="logo_footer" src="img/white_logo.png" alt="">
@@ -436,6 +536,7 @@ verifyBtn.addEventListener("click", function () {
                 <p>الصافي سنتر للأجهزة الكهربائية و الأدوات المنزلية</p>
 
                 <div class="icons_footer">
+                     <a href="https://wa.me/012 87720314" target="_blank" class="fa-brands fa-whatsapp" style="color: #f9f9f9; font-size: larger;"></a>
                     <a href="https://www.facebook.com/share/1Fcx9YwWTS/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/Alsafy_electrical_stores/#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.tiktok.com/@alsafy_electrical_store?_t=ZS-8zcLZWbm7Wc&_r=1" target="_blank">
@@ -444,50 +545,53 @@ verifyBtn.addEventListener("click", function () {
             </div>
 
             <div class="row">
-                <h4>Find It Fast</h4>
+                <h4>أحصل علي ما تريد أسرع</h4>
 
                 <div class="links">
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Laptops & Computers </a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Smart Phones & Tablets</a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> TV & Audio</a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Appliances</a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Jewelry & Watches</a>
+                            <a href="Home_Appliances.html" style=" font: 1em sans-serif;font-size: 12px; padding: -4px;"><i class="fa-solid fa-caret-right"></i>ثلاجات</a>
+                            <a href="Washing_machines.html" style=" font: 1em sans-serif;font-size: 12px;"><i class="fa-solid fa-caret-right"></i>غسالات ملابس</a>
+                            <a href="washing_dish.html" style="font-weight: bolder ; font: 1em sans-serif;font-size: 12px"><i class="fa-solid fa-caret-right"></i>غسالات أطباق</a>
+                            <a href="gas.html" style="font-weight: bolder ; font: 1em sans-serif;font-size: 12px;"><i class="fa-solid fa-caret-right"></i>غسالات</a>
+                            <a href="Air Conditioners_Purifiers.html" style="font-weight: bolder ; font: 1em sans-serif;font-size: 12px;"><i class="fa-solid fa-caret-right"></i>مكيفات هواء</a>
+                            <a href="freezer.html" style="font-weight: bolder ; font: 1em sans-serif;font: 1em sans-serif;font-size: 12px;"><i class="fa-solid fa-caret-right"></i>ديب فريزر</a>
+                            <a href="TVs.html" style="font-weight:bolder ; font: 1em sans-serif;font: 1em sans-serif;font-size: 12px;"><i class="fa-solid fa-caret-right"></i>شاشات تلفزيون</a>
+                            <a href="fans.html" style="font-weight:bolder; font: 1em sans-serif;font: 1em sans-serif;font-size: 12px;"><i class="fa-solid fa-caret-right"></i>مراوح</a>   
+                            <a href="heater.html" style="font-weight:bolder; font: 1em sans-serif;font: 1em sans-serif;font-size: 12px;"><i class="fa-solid fa-caret-right"></i>سخانات</a>
+                    <a href="Home_SmallAppliances.html?filter=heater"><i class="fa-solid fa-caret-right"></i>دفايات</a>
+                    <a href="Home_SmallAppliances.html?filter=shafat"><i class="fa-solid fa-caret-right"></i>شفاطات كهربائية</a>
+                    <a href="Home_SmallAppliances.html?filter=small_"> <i class="fa-solid fa-caret-right"></i>مكانس كهربائية</a>
+                    <a href="Home_SmallAppliances.html?filter=colder"><i class="fa-solid fa-caret-right"></i>مبردات مياه</a>
+                    <a href="Home_SmallAppliances.html?filter=iron"><i class="fa-solid fa-caret-right"></i>مكواة</a>
+                    <a href="kitchen.html?filter=mixers"> <i class="fa-solid fa-caret-right"></i>خلاطات كهربائية</a>
+                    <a href="kitchen.html?filter=Kabbat"><i class="fa-solid fa-caret-right"></i>كبات و مفارم طعام</a>
+                    <a href="kitchen.html?filter=rackets"><i class="fa-solid fa-caret-right"></i>مضارب طعام</a>
+                    <a href="kitchen.html?filter=kettles"><i class="fa-solid fa-caret-right"></i>غلايات مياه</a>
+                    <a href="kitchen.html?filter=blender"><i class="fa-solid fa-caret-right"></i>هاند بلندر</a>
+                    <a href="kitchen.html?filter=Food"><i class="fa-solid fa-caret-right"></i>محضرة طعام</a>
                 </div>
             </div>
-
-
+            
             <div class="row">
-                <h4>Quick Links</h4>
+                <h4>صفحات سريعه </h4>
 
                 <div class="links">
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Your Account </a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Returns & Exchanges</a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Shipping & Delivery</a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Estimated Delivery Time</a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Purchase Hisotry</a>
+                    <a href="index.html"><i class="fa-solid fa-caret-right"></i>الرئيسية </a>
+                    <a href="Ta.html"><i class="fa-solid fa-caret-right"></i> التقسيط</a>
+                    <a href="About_.html"><i class="fa-solid fa-caret-right"></i>التوكيل</a>
+                    <a href="checkout.html"><i class="fa-solid fa-caret-right"></i> الدفع</a>
+                    <a href="blog.html"><i class="fa-solid fa-caret-right"></i> المدونة</a>
+                    <a href="contact.html"><i class="fa-solid fa-caret-right"></i> تواصل معنا</a>
                 </div>
             </div>
-
-
-            <div class="row">
-                <h4>Service us</h4>
-
-                <div class="links">
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Support Center</a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Term & Conditions</a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Privacy Policy</a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> Help</a>
-                    <a href="#"><i class="fa-solid fa-caret-right"></i> FAQS</a>
-                </div>
             </div>
+            
         </div>
-
         <div class="bottom_footer">
             <div class="container">
-                <p>&copy; <span>Reda Store.</span> All Rights Reserved.</p>
+                <p>&copy; <span>Elsafy Center</span> كل الحقوق محفوظة.</p>
 
                 <div class="payment_img">
-                    <img src="img/instaa.png" alt="">
+                    <img src="img/payment_method.png" alt="">
                 </div>
             </div>
         </div>

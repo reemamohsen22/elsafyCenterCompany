@@ -95,7 +95,7 @@ function updateCart() {
          if(checkout_items){
         items_input.value += item.name + "   ---   " + "price : " + total_Price_item + "  ---  " + "count : " + item.quantity + "\n"
 
-        total_Price_input.value = total_Price + 20
+        total_Price_input.value = total_Price + 50
         count_Items_input.value = total_count 
          }
         
@@ -168,7 +168,7 @@ function updateCart() {
         const total_checkout = document.querySelector(".total_checkout")
 
         subtotal_checkout.innerHTML= `EGP ${total_Price}`
-        total_checkout.innerHTML= `EGP ${total_Price + 20}`
+        total_checkout.innerHTML= `EGP ${total_Price + 50}`
     }
 
 
@@ -243,10 +243,34 @@ function updateButoonsState(productId) {
     const allMatchingButtons = document.querySelectorAll(`.btn_add_cart[data-id="${productId}"]`)
     allMatchingButtons.forEach(button =>{
         button.classList.remove('active');
-        button.innerHTML = `      <i class="fa-solid fa-cart-shopping"></i> إضافة إلي السلة`
+        button.innerHTML = `      <i class="fa-solid fa-cart-shopping"></i> أضف للسلة`
     })
 }
 
 
 
 updateCart()
+
+
+document.addEventListener("click", function(e) {
+    const btn = e.target.closest(".btn_add_cart");
+    if (!btn) return;
+
+    const productId = btn.dataset.id;
+
+    fetch('products.json')
+    .then(res => res.json())
+    .then(data => {
+        const product = data.find(p => p.id == productId);
+
+        if(product){
+            addToCart(product);
+
+            const allBtns = document.querySelectorAll(`.btn_add_cart[data-id="${productId}"]`);
+            allBtns.forEach(b => {
+                b.classList.add("active");
+                b.innerHTML = `<i class="fa-solid fa-cart-shopping"></i> تمت الإضافة`;
+            });
+        }
+    });
+});

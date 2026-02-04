@@ -11,8 +11,6 @@ var swiper = new Swiper(".slide-swp", {
   });
 
 
-  /* swiper slide products */
-
   var swiper = new Swiper(".slide_product", {
     slidesPerView: 5,
     spaceBetween:20,

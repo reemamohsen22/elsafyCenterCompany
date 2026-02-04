@@ -7,8 +7,8 @@ fetch('products.json')
     const swiper_elctronics = document.getElementById("swiper_elctronics");
     const swiper_appliances = document.getElementById("swiper_appliances");
     const swiper_mobiles = document.getElementById("swiper_mobiles");
+    
 
-    // 🧩 Helper: render a single product
     function renderProduct(container, product) {
         const isInCart = cart.some(cartItem => cartItem.id === product.id);
         const old_price_Pargrahp = product.old_price ? `<p class="old_price">EGP ${product.old_price}</p>` : "";
@@ -42,7 +42,7 @@ fetch('products.json')
 
                 <div class="icons">
                     <span class="btn_add_cart ${isInCart ? 'active' : ''}" data-id="${product.id}">
-                        <i class="fa-solid fa-cart-shopping"></i> ${isInCart ? 'تمت الإضافة' : 'إضافة إلي السلة'}
+                        <i class="fa-solid fa-cart-shopping"></i> ${isInCart ? 'تمت الإضافة' : 'أضف للسلة'}
                     </span>
                     <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
                 </div>
@@ -50,7 +50,6 @@ fetch('products.json')
         `;
     }
 
-    // 🧩 Render by categories
     data.forEach(product => {
         if (product.old_price) renderProduct(swiper_items_sale, product);
         if (product.catetory === "electronics") renderProduct(swiper_elctronics, product);
@@ -58,7 +57,6 @@ fetch('products.json')
         if (product.catetory === "mobiles") renderProduct(swiper_mobiles, product);
     });
 
-    // 🧩 Add modal HTML once (NO Add to Cart button here)
     const modalHTML = `
         <div id="productModal" class="product-modal" style="display:none;">
             <div class="modal-content">
@@ -79,20 +77,17 @@ fetch('products.json')
     const modalPrice = document.getElementById("modalPrice");
     const modalDesc = document.getElementById("modalDesc");
 
-    // 🧩 Click on image or name opens modal
 document.addEventListener("click", (e) => {
     const target = e.target.closest(".view-details");
     if (target) {
         e.preventDefault();
         const productId = target.dataset.id;
 
-        // 🔗 الانتقال لصفحة تفاصيل المنتج
         window.location.href = `product.html?id=${productId}`;
     }
 });
 
 
-    // 🧩 Close modal
     closeModal.onclick = () => modal.style.display = "none";
     window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
 });

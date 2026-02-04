@@ -1,40 +1,4 @@
-// const scriptURL = "https://script.google.com/macros/s/AKfycbzaq6rxqXA6lKpX__DTRXPCXoI3j940dVVLZBZwDBOlLCUdrml5iwwCimI0yBS-rG7F/exec"
 
-// let form = document.getElementById("form_contact");
-
-
-// form.addEventListener("submit" , (e) =>{
-//     e.preventDefault()
-
-//     fetch(scriptURL , {
-//         method: "POST" ,
-//         body: new FormData(form),
-//     })
-//     .then((response) => {
-//         setTimeout(() => {
-//             localStorage.removeItem("cart")
-//             window.location.reload()
-//         },3000)
-//     })
-//     .catch((error) => console.error("eroor!" , error.message))
-// })
-
-// async function uploadToCloudinary(file) {
-//   const formData = new FormData();
-//   formData.append("file", file);
-//   formData.append("upload_preset", "proof_upload"); // اسم الـ preset
-
-//   const response = await fetch(
-//     "https://api.cloudinary.com/v1_1/proof_upload/image/upload",
-//     {
-//       method: "POST",
-//       body: formData
-//     }
-//   );
-
-//   const data = await response.json();
-//   return data.secure_url; // رابط الصورة
-// }
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbzaq6rxqXA6lKpX__DTRXPCXoI3j940dVVLZBZwDBOlLCUdrml5iwwCimI0yBS-rG7F/exec";
 
